@@ -3,15 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev":"sucrase-node src/"
+    "dev": "sucrase-node src/"
   },
   "license": "MIT",
   "dependencies": {
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.14",
     "@types/morgan": "^1.9.3",
+    "@types/uuid": "^8.3.4",
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@types/multer": "^1.4.7",
