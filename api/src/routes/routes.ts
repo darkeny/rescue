@@ -1,8 +1,13 @@
 import Router from 'express'
+import upload from 'multer'
+import { configMulter } from '../config/multer';
 
-const routes = Router()
+export const routes = Router()
 
-routes.post('post', (req, res) => {
-    console.log("Succeed");
+routes.post('/posts', upload(configMulter).array('file'), (req, res) => {
+    console.log(req.files);
+    return res.status(200).json({hello: 'succeed'})
+    
+    
     
 })
