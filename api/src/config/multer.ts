@@ -9,12 +9,14 @@ export const configMulter = {
         destination: (req, file, callback) => {
             callback(null, uploadsFolder)    
         },
+        
         filename: (req, file, callback) => {
             crypto.randomBytes(16, (err, hash) => {
                 const uniqueSuffix = `${hash.toString('hex')}-${file.originalname}`
                 callback(null, uniqueSuffix)
             })
         },
+
     }), 
 
 }
